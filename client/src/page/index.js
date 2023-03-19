@@ -6,7 +6,7 @@ export const IndexPage = () => {
   const [value, setValue] = useState("");
   useEffect(() => {
     const fetch = async () => {
-      const { data } = await axios.get("http://localhost:3333");
+      const { data } = await axios.put("http://localhost:3333/hotel");
       console.log("dataL:", data);
       setValue(data?.message ?? "something went wrong!!");
     };
